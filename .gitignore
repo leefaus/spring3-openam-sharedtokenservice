@@ -1,0 +1,14 @@
+/.project
+/.settings/
+/cxf-sample-service/.classpath
+/cxf-sample-service/.project
+/cxf-sample-service/.settings/
+/cxf-sample-service/target/
+/spring3-openam-ssoprovider/.classpath
+/spring3-openam-ssoprovider/.project
+/spring3-openam-ssoprovider/.settings/
+/spring3-openam-ssoprovider/target/
+/springmvc3-sample-webapp/.classpath
+/springmvc3-sample-webapp/.project
+/springmvc3-sample-webapp/.settings/
+/springmvc3-sample-webapp/target/
