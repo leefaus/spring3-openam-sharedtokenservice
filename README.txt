@@ -1,0 +1,3 @@
+Spring3 OpenAM SSO + STS Example
+=====================================
+Directions here...
