@@ -5,9 +5,79 @@
 	<packaging>pom</packaging>
 	<name>OpenAM SpringSSO Sample</name>
 	<version>0.1.0-SNAPSHOT</version>
+	<properties>
+        <org.springframework.security.version>3.0.6.RELEASE</org.springframework.security.version>
+        <openam.version>snapshot952</openam.version>
+    </properties>
+	<dependencies>
+				<!-- OPENAM -->
+		<dependency>
+            <groupId>com.forgerock.openam</groupId>
+            <artifactId>clientsdk</artifactId>
+            <version>${openam.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        
+        <!-- Servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		
+
+		 <!-- Spring security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+            <version>${org.springframework.security.version}</version>
+            <exclusions>
+            	<exclusion>
+            		<artifactId>spring-expression</artifactId>
+            		<groupId>org.springframework</groupId>
+            	</exclusion>
+            	<exclusion>
+            		<artifactId>spring-context</artifactId>
+            		<groupId>org.springframework</groupId>
+            	</exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${org.springframework.security.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${org.springframework.security.version}</version>
+        </dependency>
+	</dependencies>
+	
 	<modules>
 		<module>springmvc3-sample-webapp</module>
 		<module>spring3-openam-ssoprovider</module>
 		<module>cxf-sample-service</module>
 	</modules>
+	
+	<repositories>
+        <repository>
+            <id>forgerock</id>
+            <url>http://repo.forgerock.org</url>
+        </repository>
+    </repositories>
 </project>
